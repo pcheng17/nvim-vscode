@@ -1,3 +1,3 @@
 # nvim-vscode
 
-My personal Neovim settings for VSCode.
+My Neovim settings for VSCode.
