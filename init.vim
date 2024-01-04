@@ -88,17 +88,15 @@ set clipboard=unnamedplus
 " Personal settings
 
 " Append next line to current line with space 
-nnoremap U mzJ`z
-
-" Fast vertical navigation 
-nnoremap K 10k
-vnoremap K 10k
-nnoremap J 10j
-vnoremap J 10j
+nnoremap J mzJ`z
 
 " Easier indenting
 vnoremap < <gv
 vnoremap > >gv
+
+" Move visually-selected blocks
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
 
 " Delete into the black hole register
 nnoremap x "_x
