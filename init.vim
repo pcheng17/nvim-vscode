@@ -101,6 +101,11 @@ vnoremap K :m '<-2<CR>gv=gv
 " Delete into the black hole register
 nnoremap x "_x
 
+nnoremap <esc><esc> :silent! nohls<cr>
+
 set shiftwidth=4
+set softtabstop=4
 set tabstop=4
+set expandtab
+
 set textwidth=100
