@@ -87,7 +87,7 @@ set clipboard=unnamedplus
 
 " Personal settings
 
-" Append next line to current line with space 
+" Append next line to current line with space
 nnoremap J mzJ`z
 
 " Easier indenting
@@ -109,3 +109,13 @@ set tabstop=4
 set expandtab
 
 set textwidth=100
+
+augroup FormatOptionsGroup
+  autocmd!
+  autocmd FileType * call RemoveRO()
+augroup END
+
+function! RemoveRO()
+  setlocal formatoptions-=r
+  setlocal formatoptions-=o
+endfunction
