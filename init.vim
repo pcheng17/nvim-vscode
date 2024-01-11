@@ -111,11 +111,6 @@ set expandtab
 set textwidth=100
 
 augroup FormatOptionsGroup
-  autocmd!
-  autocmd FileType * call RemoveRO()
+    autocmd!
+    autocmd FileType * setlocal formatoptions-=r formatoptions-=o
 augroup END
-
-function! RemoveRO()
-  setlocal formatoptions-=r
-  setlocal formatoptions-=o
-endfunction
